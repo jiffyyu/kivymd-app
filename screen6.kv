@@ -1,0 +1,88 @@
+<Screen6>:
+    userid:''
+    name:'screen6'
+    canvas.before:
+        Color:
+            rgba: 176/255,196/255,222/255,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Column: 
+        halign: 'center'
+        valign: 'center'
+        padding: dp(50)
+        spacing: dp(20)
+    
+        MDRaisedButton:
+            text:'User:'+ root.userid
+        MDLabel:
+            id:label
+            text: 'Vaccine Appointment'
+            font_name: 'Arial'
+            font_size: dp(35)
+            outline_width: dp(3)
+            color: 0,0.7,1,0.5
+            halign: 'center'
+            valign: 'center'
+        Image:
+            source:"covied-19 2.jpg"
+            
+        Widget:
+            expandable: True
+
+        MDTextField:
+            id: name
+            hint_text: 'Name'
+            halign: 'center'
+            valign: 'center'
+        MDTextField:
+            id: idnumber
+            hint_text: 'ID Number'
+            halign: 'center'
+            valign: 'center'
+        MDTextField:
+            id: phonenumber
+            hint_text: 'Phonenumber'
+            halign: 'center'
+            valign: 'center'
+        MDTextField:
+            id: address
+            hint_text: 'Address'
+            halign: 'center'
+            valign: 'center'
+       
+        MDFillRoundFlatIconButton:
+            text: 'Appointment'
+            text_color: 1,1,1,1
+            md_bg_color:  0.3,0,1,1
+            icon:'badge-account-horizontal'
+            icon_color: 1,1,1,1
+            on_release: root.click()
+       
+        MDFillRoundFlatIconButton: 
+            text: 'Clear' 
+            icon:'delete-circle'
+            text_color: 1,1,1,1
+            md_bg_color: 0.3,0,1,1
+            icon_color: 1,1,1,1
+            on_release: root.clear()
+        
+        MDFillRoundFlatIconButton:
+            icon: 'arrow-left-bold'
+            text: 'Back'
+            text_color: 1,1,1,1
+            md_bg_color: 0.3,0,1,1
+            icon_color: 1,1,1,1
+            on_release: root.button_back()
+
+<MDTextField@MDTextField> 
+    color_mode: 'custom' 
+    line_color_focus: 1,0,0,1 
+    line_color_normal: 1,0,0,1
+    hint_text_color: 1,0,0,1 
+    current_hint_text_color: 0,0,0,1
+    text_color: 0,0,0,1
+        
+    canvas.before:
+        Color:
+            rgba: 1,0,0,1

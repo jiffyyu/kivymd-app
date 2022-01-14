@@ -1,0 +1,110 @@
+<Screen4>:
+    userid:''
+    name: 'screen4'
+    canvas.before:
+        Color:
+            rgba: 176/255,196/255,222/255,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    MDFloatLayout:
+        MDIconButton:
+            icon: 'keyboard-return'
+            on_release: root.back() 
+            user_font_size:"20sp"
+            pos_hint:{"center_x": .1,"center_y": .98}
+        MDRaisedButton:
+            text:'User:'+ root.userid
+        MDLabel:
+            text:"Bed Booking"
+            font_name: 'Arial'
+            font_style: "H4"
+            color: 0,0,0,1
+            adaptive_height: True
+            italic: True
+            bold: True
+            shorten: True
+            shorten_from: 'right'
+            halign: 'center'
+            valign: 'top'
+            pos_hint:{"center_x": .5,"center_y": .95}
+        MDGridLayout:
+            cols:2
+            size_hint: 1, .25
+            spacing:10
+            pos_hint:{"center_x": .5,"center_y": .78}
+            MDLabel:
+                text:"RoomA"
+                color: 0,0,0,1
+                font_style: "H5"
+                bold: True
+                font_name: 'Arial'
+                canvas.before:
+                    Color:
+                        rgb: 1, 1, 1, 1
+                    RoundedRectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"firebase.jpg"
+            MDLabel:
+                text:"RoomB"
+                color: 0,0,0,1
+                font_style: "H5"
+                bold: True
+                font_name: 'Arial'
+                canvas.before:
+                    Color:
+                        rgb: 1, 1, 1, 1
+                    RoundedRectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"firebase1.jpg"
+    Column:
+        pos_hint:{'center_x': .5,'center_y': .28}
+        padding: dp(100)
+        spacing: dp(20)
+
+        SignInTextField:
+            id: name
+            hint_text: 'Name'
+
+        SignInTextField:
+            id: email
+            hint_text: 'Email address'
+            
+        SignInTextField:
+            id: idcard
+            hint_text: 'ID card number'
+        
+        SignInTextField:
+            id: time
+            hint_text: 'dd/mm/yy'
+
+        SignInTextField:
+            id: room
+            hint_text: 'The type of room'
+           
+        MDFillRoundFlatIconButton:
+            text:"Confirm"
+            icon:"account-check"
+            on_release: root.signup(name.text, email.text, idcard.text, time.text, room.text)
+            md_bg_color: 220/255,220/255,220/255
+            text_color: .5, .5, .8, 1
+            icon_color: 250/255,128/255,114/255
+
+        MDFillRoundFlatIconButton:
+            text:"Reset"
+            icon:'account-edit'
+            on_release: root.clear()
+            md_bg_color: 220/255,220/255,220/255
+            text_color: .5, .5, .8, 1
+            icon_color: 250/255,128/255,114/255
+
+
+                
+
+
+
+
+
+

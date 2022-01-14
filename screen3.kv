@@ -1,0 +1,73 @@
+<Screen3>:
+    userid:''
+    name: 'screen3'
+    Column:     
+        halign: 'center'
+        valign: 'center'
+        padding: dp(50)
+        spacing: dp(20)
+    BoxLayout:
+        orientation:'vertical'
+        Image:
+            source:'vaccine.jpg'
+            allow_stretch:True
+            keep_ratio:False
+        MDRaisedButton:
+            text:'User:'+ root.userid
+            
+    Column:
+        halign: 'center'
+        valign: 'center'
+        spacing: dp(30)
+        padding: dp(20), dp(10), dp(20), dp(10)
+        Column:
+            size_hint_y: None
+            font_name: 'Arial'
+            font_style: "H4"
+            front_size:dp(10)
+            height: dp(100)
+            background_color: 0,0.7,1,1
+            halign: 'center'
+            valign: 'center'
+            pos_hint:{"center_x": .5,"center_y": .95}
+            MDLabel
+                text: 'If you went to the high risk areas within 14 days, you need to bring a valid accounting report before you can get vaccinated!(Please input your age below)'
+                bold: True
+                italic: True
+                
+        MDTextField:
+            id: age
+            hint_text: 'Age'
+            halign: 'center'
+            valign: 'center'
+
+        MDFillRoundFlatIconButton:
+            text: 'Appointment Now'
+            text_color: 1,1,1,1
+            md_bg_color: 0.3,0,1,1
+            icon:'badge-account-horizontal'
+            icon_color: 1,1,1,1
+            on_release: root.button_clickme()
+            valign: 'center'
+            halign: 'center'
+        
+        MDFillRoundFlatIconButton:
+            text: 'Back'
+            text_color: 1,1,1,1
+            md_bg_color: 0.3,0,1,1
+            icon: 'arrow-left-bold'
+            icon_color: 1,1,1,1
+            on_release: root.button_back() 
+
+<MDTextField@MDTextField> 
+    color_mode: 'custom' 
+    line_color_focus: 0,0,0,0 
+    line_color_normal: 0,0,0,0
+    hint_text_color: 0,0,0,0 
+    current_hint_text_color: 0,0,0,0
+    text_color: 0,0,0,0
+        
+    canvas.before:
+        Color:
+            rgba: 0,0,0,0
+

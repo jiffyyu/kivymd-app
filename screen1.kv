@@ -1,0 +1,79 @@
+<Screen1>:
+    userid:''
+    name: 'screen1'
+    Column: 
+        MDFillRoundFlatIconButton:
+            icon: 'fingerprint'
+            text: 'Back'
+            on_release: root.back()
+        
+    BoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            elevation: dp(5)
+            title: 'EXPENSES'
+            color: 1, 1, 1, 1
+            italic: True
+            bold: True
+        MDLabel:
+            text: ' '
+            halign: 'center' 
+
+    GridLayout:
+        cols: 3
+        MDLabel:
+            text: 'ITEM'
+            halign: 'center'
+            bold: True
+        MDLabel:
+            text: 'OUTPATIENT'
+            halign: 'center'
+            bold: True
+        MDLabel:
+            text: 'GENERAL WARD'
+            halign: 'center'
+            bold: True
+        MDLabel:
+            text: 'FIRST CONSULTATION'
+            halign: 'center'
+            bold: True
+        MDLabel:
+            text: '$100'
+            halign: 'center'
+        MDLabel:
+            text: '$150'
+            halign: 'center'
+        MDLabel:
+            text: 'EXTENDED FIRST CONSULTATION'
+            halign: 'center'
+            bold: True
+        MDLabel:
+            text: '$300'
+            halign: 'center'
+        MDLabel:
+            text: '$350'
+            halign: 'center'
+        MDLabel:
+            text: 'FOLLOW UP CONSULTATION'
+            halign: 'center'
+            bold: True
+        MDLabel:
+            text: '$200'
+            halign: 'center'
+        MDLabel:
+            text: '$250'
+            halign: 'center'
+        MDLabel:
+            text: 'EXTENDED FOLLOW UP CONSULTATION'
+            halign: 'center'
+            bold: True
+        MDLabel:
+            text: '$400'
+            halign: 'center'
+        MDLabel:
+            text: '$450'
+            halign: 'center'
+        MDRaisedButton:
+            text:'User:'+ root.userid  
+
+                

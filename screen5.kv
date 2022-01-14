@@ -1,0 +1,70 @@
+<Screen5>:
+    userid:''
+    name: 'screen5'
+    Column:
+        ScrollView:
+            Column:
+                id: container
+                fit_content_height: True
+                padding: dp(10)
+                spacing: dp(5)
+                MDIconButton:
+                    icon: 'keyboard-return'
+                    on_release: root.back() 
+                    user_font_size:"20sp"
+                    theme_text_color: "Error"
+                MDRaisedButton:
+                    text:'User:'+ root.userid
+                MDLabel:
+                    text: "Q&A"
+                    font_name: 'Arial'
+                    font_style: "H4"
+                    theme_text_color: "Error"
+                    adaptive_height: True
+                    italic: True
+                    bold: True
+                    shorten: True
+                    shorten_from: 'right'
+                    halign: 'center'
+                    valign: 'top'
+<MessageItem>:
+    tailing_width: dp(100)
+    post_time: ''
+    author: ''
+    on_release: self.show_details()
+    MDIcon:
+        icon: 'account'
+        role: 'leading'
+        theme_text_color: "Error"
+    MDLabel:
+        text: root.post_time
+        role: 'tailing'
+        font_size: dp(10)
+        halign: 'right'
+    MDLabel:
+        text: root.author
+        role: 'tailing'
+        font_size: dp(10)
+        halign: 'right'
+<DetailScreen>:
+    userid:''
+    name: 'DetailScreen'
+    title: ''
+    content: ''
+    post_time: ''
+    author: ''
+    Column:
+        MDToolbar:
+            title: root.title
+            left_action_items: [['arrow-left', lambda x:root.go_back()]]
+        ScrollView:
+            Column:
+                fit_content_height: True
+                MDLabel:
+                    text: root.content
+                MDLabel:
+                    text: root.post_time
+                MDLabel:
+                    text: root.author
+        MDRaisedButton:
+            text:'User:'+ root.userid

@@ -1,0 +1,60 @@
+<ScreenB>:
+    userid:''
+    name: 'screenB'
+    Column:
+        halign: 'center'
+        valign: 'center'
+        spacing: dp(20)
+
+        canvas.before:
+            Color:
+                rgba: 255/255,250/255,250/255,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "firebase2.jpg"
+        MDRaisedButton:
+            text:'Welcome! User:'+ root.userid
+
+        MDFillRoundFlatIconButton:
+            icon: 'fingerprint'
+            text: 'Expense'
+            on_release: root.to()
+            md_bg_color: 220/255,220/255,220/255
+            text_color: .5, .5, .8, 1
+            icon_color: 250/255,128/255,114/255
+
+        MDFillRoundFlatIconButton:
+            icon: 'fingerprint'
+            text: 'Interview Time'
+            on_release: root.too()
+            md_bg_color: 220/255,220/255,220/255
+            text_color: .5, .5, .8, 1
+            icon_color: 250/255,128/255,114/255
+
+        MDFillRoundFlatIconButton:
+            icon: 'fingerprint'
+            text: 'COVID-19'
+            on_release: root.tooo()
+            md_bg_color: 220/255,220/255,220/255
+            text_color: .5, .5, .8, 1
+            icon_color: 250/255,128/255,114/255
+
+        MDFillRoundFlatIconButton:
+            icon: 'fingerprint'
+            text: 'Bed Booking'
+            on_release: root.toooo()
+            md_bg_color: 220/255,220/255,220/255
+            text_color: .5, .5, .8, 1
+            icon_color: 250/255,128/255,114/255
+
+        MDFillRoundFlatIconButton:
+            icon: 'fingerprint'
+            text: 'Q&A'
+            on_release: root.tooooo()
+            md_bg_color: 220/255,220/255,220/255
+            text_color: .5, .5, .8, 1
+            icon_color: 250/255,128/255,114/255
+
+
+ 

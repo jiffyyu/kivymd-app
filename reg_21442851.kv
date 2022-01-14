@@ -1,0 +1,68 @@
+<reg>
+    name: 'reg' 
+    canvas.before:
+        Color:
+            rgba:1,0.4,0.3,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Column:
+        halign: 'center'
+        valign: 'center'
+        padding: dp(100)
+        spacing: dp(20)
+        
+        MDLabel:
+            id: label
+            text: 'REGISTRATION'
+            font_size: dp(31)
+            color: 1,1,1,1
+        
+        Widget:
+            expandable: True
+
+        SignInTextField:
+            id: phone_field
+            hint_text: 'Phone number'
+
+        SignInTextField:
+            id: password_field 
+            hint_text: 'Password' 
+            password: True
+            
+        MDFillRoundFlatIconButton: 
+            text: 'RESGISTER' 
+            icon:'account'
+            icon_color: 1,1,1,1
+            on_release: root.reg()
+            
+        MDFillRoundFlatIconButton: 
+            text: 'LOGIN' 
+            icon:'account'
+            icon_color: 1,1,1,1
+            on_release: root.login()
+
+        MDFillRoundFlatIconButton: 
+            text: 'Clear' 
+            icon:'delete-circle'
+            icon_color: 1,1,1,1
+            on_release: root.clear()
+
+        MDFillRoundFlatIconButton: 
+            text: 'Cancel' 
+            icon:'trash-can'
+            icon_color: 1,1,1,1
+            on_release: root.cancel()
+
+<SignInTextField@MDTextField> 
+    color_mode: 'custom' 
+    line_color_focus: 1,1,1,1 
+    line_color_normal: 1,1,1,1
+    hint_text_color: 1,1,1,1 
+    current_hint_text_color: 1,1,1,0.6 
+    text_color: 1,1,1,1
+        
+    canvas.before:
+        Color:
+            rgba: 1,1,1,1
